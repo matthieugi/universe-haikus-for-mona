@@ -23,11 +23,11 @@ app.get('/', (req, res) => {
   });
 });
 
-app.post('/heart', (req, res) => {
-  pool.query('UPDATE haikus SET hearts = hearts + 1 WHERE id = $1', [req.body.id], () => {
-    res.send('Success');
-  });
-});
+// app.post('/heart', (req, res) => {
+//   pool.query('UPDATE haikus SET hearts = hearts + 1 WHERE id = $1', [req.body.id], () => {
+//     res.send('Success');
+//   });
+// });
 
 app.listen(port);
 console.log(`Server running on http://localhost:${port}`)
