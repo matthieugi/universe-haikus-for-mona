@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/heart', (req, res) => {
-  pool.query('UPDATE haikus SET hearts = hearts + 1 WHERE id = $1', [req.body.id], () => {
+  pool.query(`UPDATE haikus SET hearts = hearts + 1 WHERE id = ${req.body.id}`, [], () => {
     res.send('Success');
   });
 });
