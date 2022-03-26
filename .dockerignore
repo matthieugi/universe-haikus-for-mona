@@ -1,3 +1,6 @@
+.devcontainer/
+.github/
+.vscode/
 **/.classpath
 **/.dockerignore
 **/.env
